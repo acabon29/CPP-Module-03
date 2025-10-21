@@ -68,9 +68,9 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	std::cout << "ClapTrap "<< this->name_ << " repaired " << amount << " hit points and have now " << hp_ << " hp!" << std::endl;
 }
 
-std::string	ClapTrap::getName() const { return (name_); }
-int	ClapTrap::getHitPoints() const { return (hp_); }
-int	ClapTrap::getEnergyPoints() const { return (ep_); }
-int	ClapTrap::getAttackDamage() const { return (ad_); }
+std::string	ClapTrap::getName( void ) const { return (name_); }
+int ClapTrap::getHp( void ) const { return (hp_); }
+int ClapTrap::getEp( void ) const { return (ep_); }
+int ClapTrap::getAd( void ) const { return (ad_); }
 
-void ClapTrap::setAd(int newAd) { this->ad_ = newAd; }
+void ClapTrap::setAd( const int &newAd ) { this->ad_ = newAd; }

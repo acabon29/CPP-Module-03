@@ -10,22 +10,23 @@ int main() {
     ClapTrap b(name2);
 
 	std::cout << "----------------------------------------" << std::endl;
-    std::cout << "Actions Basics:\n";
-    a.attack("Bob2");
+    std::cout << "Actions Basics:" << std::endl;
+    a.attack(name2);
     b.takeDamage(3);
     b.beRepaired(5);
 
 	std::cout << "----------------------------------------" << std::endl;
-    std::cout << "Mongolito:\n";
+    std::cout << "Mongolito:" << std::endl;
     for (int i = 0; i < 10; ++i) {
-        b.attack("Bob");
+        b.attack(name);
     }
 
 	std::cout << "----------------------------------------" << std::endl;
-    std::cout << "BOOOOM!!!\n";
+    std::cout << "BOOOOM!!!" << std::endl;
 	a.setAd(1000);
-    a.attack("Bob2");
+    a.attack(name2);
     b.takeDamage(1000);
+    std::cout << "----------------------------------------" << std::endl;
 
     return (0);
 }

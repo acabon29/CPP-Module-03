@@ -13,7 +13,7 @@ ScavTrap::ScavTrap( const std::string& name ) : ClapTrap() {
 	this->hp_ = 100;
 	this->ep_ = 50;
 	this->ad_ = 20;
-	this->name_ = "ScavTrap";
+	this->name_ = name;
 	std::cout << "ScavTrap constructor called." << std::endl;
 }
 
@@ -22,12 +22,8 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap destructor called." << std::endl;
 }
 
-ScavTrap::ScavTrap (const ScavTrap& other)
+ScavTrap::ScavTrap (const ScavTrap& other) : ClapTrap( other )
 {
-	this->hp_ = other.hp_;
-	this->ep_ = other.ep_;
-	this->ad_ = other.ad_;
-	this->name_ = other.name_;
 	std::cout << "ScavTrap copy constructor called." << std::endl;
 }
 
